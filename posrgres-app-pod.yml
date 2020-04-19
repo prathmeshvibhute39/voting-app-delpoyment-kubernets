@@ -7,8 +7,9 @@ metadata:
     app: demo-voting-app
 
 spec:
-  conatainers:
-  - name: postgres-app
-    image: postgres:9.4
+  containers:
+  - name: postgres
+    image: postgres:10.4
+    imagePullPolicy: "IfNotPresent"
     ports:
-    - conatainerPort: 5432
+    - containerPort: 5432
